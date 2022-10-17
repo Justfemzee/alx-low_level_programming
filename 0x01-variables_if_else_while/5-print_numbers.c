@@ -3,19 +3,14 @@
 #include <time.h>
 /**
  * main - Entry point
- *
- * Return: Always 0
+ * Return: always 0
  */
 int main(void)
 {
-	char low;
-	{
+	int i;
 
-	for (low = 'a'; low <= 'z'; low++)
-		if (low != 'e' && low != 'q')
-			continue;
-				putchar(low);
+	for (i = '0'; i <= '9'; i++)
+		putchar(i);
 	putchar('\n');
-	}
 	return (0);
 }
