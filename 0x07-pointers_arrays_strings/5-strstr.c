@@ -1,30 +1,26 @@
 #include "main.h"
-
 /**
- * _strspn - function that gets the length of a prefix substring.
- * @s: An input character
- * @accept: An input character
- * Return: the number of bytes in the initial segment of s,
- * which consist only of bytes from accept
+ * _strstr - Entry point
+ * @haystack: input
+ * @needle: input
+ * Return: Always 0 (Success)
  */
-
-unsigned int _strspn(char *s, char *accept)
+char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
-	int c = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
+	for (; *haystack != '\0'; haystack++)
 	{
-		if (s[i] != 32)
+		char *l = haystack;
+		char *p = needle;
+
+		while (*l == *p && *p != '\0')
 		{
-			for (j = 0; accept[j] != '\0'; j++)
-			{
-				if (s[i] == accept[j])
-					c++;
-			}
+			l++;
+			p++;
 		}
-		else
-			return (c);
+
+		if (*p == '\0')
+			return (haystack);
 	}
-	return (c);
+
+	return (0);
 }
