@@ -39,8 +39,8 @@ return (1);
  */
 
 int main(int argc, char *argv[])
-{
 
+{
 
 /*Declaring variables*/
 int count;
@@ -71,4 +71,3 @@ printf("%d\n", sum); /*print sum*/
 
 return (0);
 }
-
